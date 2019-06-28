@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(#ED213A, #93291E);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 70px;
+}
+header h1{
+    text-align: center;
+    font-family: Georgia;
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3em;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: 40px 100px 40px 100px;
+}
+.offerBox{
+    cursor: pointer;
+    width: 1005px;
+    height: 440px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 50px;
+    display: none;
+}
+.offerBox > div{
+    margin: 15px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.offerBox > div:hover{
+    animation: cog 2s ease-in-out;
+}
+.card{
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 18px;
+    display: block;
+    margin-top: 60px;
+    border: 3px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  animation: float 3s ease-out infinite;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 20px;
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 50%;
+  font-family: Montserrat;
+  box-shadow: 0 4px 8px 0 rgba(255,255,255, .2),0 6px 20px 0 rgba(255,255,255, .19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 15px;
+  background-color: #860400;
+  color: white;
+  font-size: 1.5em;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal-body {
+    padding: 40px;
+    font-size: 1.3em;
+    text-align: justify;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+@keyframes float {
+  50% {
+     transform: translate(0, 30px);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes cog {
+  0%{
+    transform: perspective(300px) scale(1);
+  }
+  25%{
+    transform: perspective(300px) scale(1.2);
+  }
+}
